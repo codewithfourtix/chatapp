@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import "./App.css";
 import { Auth } from "./components/Auth";
 import Cookies from "universal-cookie";
@@ -22,7 +22,7 @@ function App() {
   return (
     <div>
       {room ? (
-        <Chat />
+        <Chat room={room} />
       ) : (
         <div>
           <label>Enter room name:</label>
