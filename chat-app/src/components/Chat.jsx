@@ -1,14 +1,25 @@
 // import React from "react";
-import { useState } from "react";
-import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { useState, useEffect } from "react";
+import {
+  addDoc,
+  collection,
+  onSnapshot,
+  serverTimestamp,
+} from "firebase/firestore";
 import { auth, db } from "../firebase-config";
 import "../Styles/Chat.css";
 
 const Chat = (props) => {
   const [newMessage, setNewMessage] = useState("");
+
   const { room } = props;
 
   const messagesRef = collection(db, "messages");
+
+  useEffect(() => {
+    onSnapshot;
+  }, []);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     // console.log(newMessage);
